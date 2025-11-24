@@ -1,0 +1,416 @@
+/* Importação de fontes - Exemplo do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Variáveis CSS (bom para iniciantes entenderem a organização de cores) */
+:root {
+    --primary-color: #F7C948; /* Amarelo principal */
+    --secondary-color: #333;
+    --text-color: #555;
+    --light-bg: #f9f9f9;
+    --white: #fff;
+    --dark-violet: #3d3dcd; /* Roxo escuro para contraste */
+    --hero-light-yellow: #fbecbb;   /* NOVO! Amarelo muito claro, mas com mais cor que #FFFDE7 */
+    --hero-lighter-yellow: #FFFFFF; /* Branco puro, mas pode ser um toque de amarelo mais claro ainda, ex: #FFFFF0 */
+}
+
+/* Reset básico para remover margens e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para o controle de layout */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+/* Container para centralizar o conteúdo e limitar a largura */
+.container {
+    width: 960px; /* Largura fixa para esta versão simples */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px;
+}
+
+
+/* Wrapper que agrupa o ícone e o texto do logo */
+.logo-wrapper {
+    display: flex;           /* Alinha o ícone e o texto na mesma linha */
+    align-items: center;     /* Centraliza-os verticalmente um em relação ao outro */
+    gap: 8px;                /* Controla o ESPAÇO entre o ícone e o texto. Ajuste este valor! */
+}
+
+/* Estilização específica do ÍCONE (emoji) */
+.logo-icon {
+    font-size: 2em;          /* Tamanho do emoji */
+    color: var(--primary-color); /* Cor do emoji (amarelo) */
+    line-height: 1;          /* Ajuda a centralizar verticalmente */
+}
+
+/* Estilização específica do TEXTO do logo */
+.logo-text {
+    font-family: 'Open Sans', sans-serif; /* Use 'Open Sans' ou 'Montserrat' para os títulos, como sugerido antes */
+    font-size: 1.3em;        /* Tamanho do texto */
+    color: var(--primary-color); /* Cor do texto (amarelo) */
+    margin: 0;               /* Remove margem padrão do h1 */
+}
+
+/* Header - Cabeçalho do site */
+header {
+    background-color: #242474;
+    color: var(--white);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+header .container {
+    display: flex; /* Usa Flexbox para alinhar logo e navegação na mesma linha */
+    justify-content: space-between; /* Espaço entre o logo e a navegação */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+/* Navegação */
+header nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Alinha os itens da navegação na mesma linha */
+}
+
+header nav ul li {
+    margin-left: 25px; /* Espaçamento entre os itens da navegação */
+    font-size: 15px;
+
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color); /* Altera a cor do link ao passar o mouse */
+}
+
+
+.hero-hashtag {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em; /* Tamanho bom para destaque, não tão pequeno */
+    font-weight: bold; /* Negrito forte para chamar atenção */
+    color: var(--secondary-blue); /* Use o AZUL VIBRANTE para a hashtag */
+    margin-bottom: 30px; /* Espaçamento maior para separá-la da descrição */
+    margin-top: -10px; /* Puxa um pouco para perto do título, sem grudar */
+    letter-spacing: 0.5px; /* Adiciona um pouco de espaço entre as letras */
+}
+
+/* Hero Section - Seção principal de destaque */
+.hero {
+    background: linear-gradient(0deg, rgb(0 0 0 / 65%), rgb(4 1 1 / 35%)), url(https://blog.unoeste.br/wp-content/uploads/2025/09/setembro-amarelo.jpg) center / cover no-repeat, linear-gradient(46deg, #e9d18b, #f7f3e7);
+    color: var(--dark-violet); /* Cor do texto para contraste com o amarelo */
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--hero-light-yellow); /* Fundo com o amarelo claro da seção Hero */
+    color: var(--secondary-blue); /* Texto em azul vibrante */
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 2px solid var(--secondary-blue); /* Borda sutil no azul */
+    border-radius: 8px; /* Cantos mais arredondados para suavidade */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease; /* Transição para todas as propriedades */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+}
+
+
+
+.btn-cta:hover {
+    background-color: var(--primary-color); /* Inverte as cores no hover */
+    color: var(--primary-yellow); /* Texto amarelo no hover */
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra um pouco mais forte no hover */
+}
+
+
+/* Seções de Conteúdo Geral */
+.info-section, .call-to-action, .resources-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.info-section h3, .call-to-action h3, .resources-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: var(--dark-violet);
+    margin-bottom: 40px;
+}
+
+.info-section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1em;
+    color: var(--secondary-color);
+}
+
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+/* Seção "Onde Buscar Ajuda?" (Cards) */
+.cards-ajuda {
+    display: flex; /* Usa Flexbox para os cards */
+    justify-content: center; /* Centraliza os cards */
+    gap: 30px; /* Espaçamento entre os cards */
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 300px; /* Largura fixa para cada card */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito sutil de levantar ao passar o mouse */
+}
+
+.card h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-violet);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.card p {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    display: block; /* Cada botão ocupa uma linha */
+    background-color: var(--primary-color);
+    color: var(--dark-violet);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #e6c200;
+}
+
+/* Seção "Como Posso Ajudar?" (Grid) */
+.grid-ajuda {
+    display: grid; /* Usa Grid para os itens de ajuda */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanho igual */
+    gap: 30px; /* Espaçamento entre os itens do grid */
+    margin-top: 40px;
+}
+
+.item-ajuda {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 25px;
+    text-align: center;
+}
+
+.item-ajuda h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-violet);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.item-ajuda p {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+/* Seção Recursos */
+.resources-section ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin-top: 30px;
+    max-width: 600px; /* Limita a largura da lista */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resources-section ul li {
+    margin-bottom: 15px;
+}
+
+.resources-section ul li a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resources-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo da Seção Sobre com Imagem */
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 40px; /* Espaço entre texto e imagem */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 40px;
+}
+
+.sobre-texto, .sobre-imagem {
+    flex: 1; /* Faz com que ambos ocupem 50% do espaço */
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilo do Vídeo Responsivo */
+.resources-section h4 {
+    font-size: 1.5em;
+    color: var(--dark-violet);
+    margin-top: 40px;
+}
+
+.resources-section p {
+    max-width: 600px;
+    margin: 10px auto 30px auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (9 / 16 * 100) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+form .btn-form { 
+    display: inline-block;
+    background-color: var(--primary-color); /* Fundo com o amarelo claro da seção Hero */
+    color: var(--dark-violet);
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 2px solid var(--secondary-blue); /* Borda sutil no azul */
+    border-radius: 8px; /* Cantos mais arredondados para suavidade */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 
+}
+
+form .btn-form:hover {
+    background-color: var(--dark-violet); /* Inverte as cores no hover */
+    color: var(--white); /* Texto amarelo no hover */
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra um pouco mais forte no hover */
+}
+
+/* Estilo do Formulário de contato */
+.form-contato {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(247, 201, 72, 0.5);
+}
+
+/* Footer - Rodapé do site */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex; /* Usa Flexbox para alinhar conteúdo do footer */
+    flex-direction: column; /* Coloca os itens um abaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.social-media a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
